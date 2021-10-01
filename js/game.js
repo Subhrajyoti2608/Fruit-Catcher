@@ -41,7 +41,7 @@ class Game{
 
                 Player.getPlayerInfo();
 //Call the getPlayerAtEnd() function in the play() function of game.js.
-
+player.getPlayerAtEnd()
 
                 image(back_img, 0, 0, 1000, 800);
                  var x =100;
@@ -77,6 +77,7 @@ class Game{
                 if(player.score>=5){
                     player.rank += 1;
 //Call the updatePlayerAtEnd() function in the play() of game.js
+Player.updatePlayerAtEnd()
                     player.update();
                     this.showRank();
                     gameState = 2; 
@@ -134,6 +135,16 @@ class Game{
     }
     showRank() {
       //create swal function
+      swal ({
+        title : `Awesome! ${'\n'}rank${'\n'}${player.rank}`,
+        text : "you reach the finish line successfully!",
+        imageUrl :  "https://raw.githubusercontent.com/vishalgaddam873/p5-multiplayer-car-race-game/master/assets/cup.png",
+        imageSize: "100x100",
+        confirmButtonText: "Ok"
+    
+    
+    
+      })
         }
 
 
